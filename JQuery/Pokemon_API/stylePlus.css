@@ -1,0 +1,49 @@
+/*CSS reset settings here*/
+*{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+img{
+  height:120px;
+  width: 120px;
+  display: inline;
+}
+li{
+list-style-position: inside;
+}
+
+/* DIVS DEFINED HERE */
+#wrapper{
+  /*height: 600px;*/
+  width: 970px;
+  font-family:arial,sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+}
+#pokepics{
+  /*height: 110px;*/
+  width: 700px;
+  border: 1px solid steelblue;
+  display:inline-block;
+  margin: 0px;
+  padding: 0px;
+  /*text-align: center;*/
+  vertical-align: top;
+}
+#pokedex{
+  /*height: 110px;*/
+  width: 200px;
+  border: 10px solid red;
+  display:inline-block;
+  margin: 0px;
+  padding: 10px;
+  /*text-align: center;*/
+  vertical-align: top;
+}
+.bold{
+  font-weight: bold;
+}

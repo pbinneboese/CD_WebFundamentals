@@ -1,0 +1,38 @@
+/*CSS reset settings here*/
+*{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+img{
+  /*height:120px;
+  width: 120px;*/
+  /*display: inline-block;*/
+  border: 1px solid black;
+}
+
+#sortable{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+#sortable li{
+  /*margin: 0 3px 3px 3px;*/
+  padding: 0.4em;
+  padding-left: 1.5em;
+  /*font-size: 1.4em;*/
+  /*height: 18px;*/
+}
+
+/* DIVS DEFINED HERE */
+#wrapper{
+  /*height: 600px;*/
+  width: 50%;
+  font-family:arial,sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+}

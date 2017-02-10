@@ -1,0 +1,12 @@
+cd Desktop/DojoAssignments/WebFundamentals/Git/test
+touch index.html styles.css aboutMe.txt
+git init
+git add .
+git commit -m "new Git repo"
+git remote add origin https://github.com/pbinneboese/DojoAssignments.git
+git push -u origin master
+echo "connected to GitHub DojoAssignments repo" >readme.md
+git status
+git add readme.md
+git commit -m "added readme"
+git log

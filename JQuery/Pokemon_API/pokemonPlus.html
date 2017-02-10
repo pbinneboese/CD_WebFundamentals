@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokemon exercise</title>
+    <link rel="stylesheet" type="text/css" href="stylePlus.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      "use strict";
+      /* My JQuery goes here */
+      var numPokemons = 151;
+      var apiURL, pokeID, pokeImgURL, pokeImgTag, pokeHTML, pokeType;
+      var data;
+      var i;
+
+      $(document).ready(function(){ /* initial page load */
+
+        for (i=1; i<=numPokemons; i++) {  /* load all Pokemon images */
+          pokeImgURL = "http://pokeapi.co/media/img/"+i+".png";
+          pokeImgTag = '<img id="'+i+'" src="'+pokeImgURL+'">';
+          $('#pokepics').append(pokeImgTag);
+        };
+
+        $('img').click(function(){ /* upon a pokemon's click, fetch its detail */
+          pokeID = $(this).attr("id");
+          pokeImgURL = "http://pokeapi.co/media/img/"+pokeID+".png";
+          apiURL = "http://pokeapi.co/api/v1/pokemon/"+pokeID;
+          $.get(apiURL, function(pokemon){
+            console.log(pokemon);
+            pokeHTML = '<h1>'+pokemon.name+'</h1>';
+            pokeHTML += '<img src="'+pokeImgURL+'">';
+            pokeHTML += '<p class="bold">Types</p>';
+            pokeHTML += '<ul>';
+            for (i=0; i<pokemon.types.length; i++) {
+              pokeType = pokemon.types[i].name;
+              pokeHTML += '<li>'+pokeType+'</li>';
+            }
+            pokeHTML += '</ul>';
+            pokeHTML += '<p class="bold">Height</p>';
+            pokeHTML += '<p>'+pokemon.height+'</p>';
+            pokeHTML += '<p class="bold">Weight</p>';
+            pokeHTML += '<p>'+pokemon.weight+'</p>';
+            $('#pokedex').html(pokeHTML);
+          }, "json");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="pokepics">
+      </div>
+      <div id="pokedex">
+      </div>
+
+    </div> <!-- end wrapper -->
+  </body>
+</html>

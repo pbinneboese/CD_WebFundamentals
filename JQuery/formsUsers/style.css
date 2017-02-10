@@ -1,0 +1,38 @@
+/*CSS reset settings here*/
+*{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+/* DIVS DEFINED HERE */
+#wrapper{
+  height: 600px;
+  width: 500px;
+  font-family:times,serif;
+  background-color: white;
+  color: black;
+  margin: 0px auto;
+  padding: 0px;
+}
+#top{
+  height: 400px;
+  width: 100%;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+}
+#bottom{
+  height: 180px;
+  width: 100%;
+  display:block;
+  vertical-align: bottom;
+  /*margin-top: 300px;*/
+  padding: 0px;
+}
+table {
+  border: 2px solid black;
+}
+th, td{
+  padding: 10px;
+  border: 1px solid black;
+}

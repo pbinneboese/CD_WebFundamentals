@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JQuery test exercise</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      "use strict";
+      /* My JQuery goes here */
+      function addTableRow(){
+        var firstName = $('input.formP1').val();
+        var lastName = $('input.formP2').val();
+        var emailAddr = $('input.formP3').val();
+        var contactNum = $('input.formP4').val();
+        var newUser =  "<tr><td>"+firstName+"</td><td>"+lastName+"</td><td>"+emailAddr+"</td><td>"+contactNum+"</td></tr>";
+        // console.log($('#myForm').serialize());
+        console.log(firstName+" "+lastName+" "+emailAddr+" "+contactNum);
+        $('#myTable').append(newUser);
+        $("#myForm").each(function(){
+          this.reset();
+        });
+        return false;
+      };
+
+      $(document).ready(function(){ /* initial page load */
+
+        $('#myForm').submit(function(){ /* form submit action */
+          addTableRow();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <p>The CodingDojo Contacts Page</p>
+        <form id="searchForm">
+          <input id="urlBar" type="text" placeholder="http://CDcontacts.com">
+          <input id="searchBar" type="text" placeholder="Search">
+        </form>
+      </div>
+
+      <div id="main">
+        <div id="userForm">
+          <form id="myForm">
+            First Name:<input class="formP1" type="text" name="firstName">
+            <p></p>
+            Last Name:<input class="formP2" type="text" name="lastName" value="">
+            <p></p>
+            Description:
+            <p></p>
+            <textarea class="formP3" name="description" rows="4" cols="30"></textarea>
+            <p></p>
+            <input type="submit" value="Add User">
+          </form>
+        </div>
+
+        <div id="cardDeck">
+          <button .class="card"><h2>Michael Choi</h2>Click for description!</button>
+          <p></p>
+          <button .class="card"><h2>John Supsupin</h2>Click for description!</button>
+          <p></p>
+          <button .class="card"><h2>Dexter Clark</h2>Click for description!</button>
+          <p></p>
+        </div>
+      </div>
+
+    </div> <!-- end wrapper -->
+  </body>
+</html>

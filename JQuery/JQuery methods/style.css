@@ -1,0 +1,120 @@
+/*CSS reset settings here*/
+*{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+/* DIVS DEFINED HERE */
+#wrapper{
+  /*height: 600px;*/
+  width: 600px;
+  font-family:arial,sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0px auto;
+  padding: 0px;
+}
+#header{
+  height: 60px;
+  width: 100%;
+  background-color: steelblue;
+  color: white;
+  border: 1px solid steelblue;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+#main{
+  /*height: 100px;*/
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid steelblue;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+}
+#footer{
+  height: 20px;
+  width: 100%;
+  background-color: gray;
+  color: black;
+  border: 1px solid steelblue;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header p{
+  display: inline-block;
+}
+#header #searchForm{
+  height: 20px;
+  width: 350px;
+  margin-left: 200px;
+  margin-top: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+#header #urlBar{
+  height: 100%;
+  width: 200px;
+  margin-top: 0px;
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  /* border-radius: 5px; */
+  /* box-shadow: 1px 1px 1px #1f1f1f; */
+  /* text-align: center; */
+}
+#header #searchBar{
+  height: 100%;
+  width: 80px;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 1px #1f1f1f; */
+  /* text-align: center; */
+}
+
+.testSection{
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid black;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+}
+.testSection .testButton{
+  height: 20px;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px #1f1f1f;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+}
+.testSection h2{
+  text-align: center;
+  margin-top: 0px;
+  /*margin-left: 100px;*/
+  display: block;
+}
+.testSection p{
+  /* text-align: center; */
+  margin-top: 20px;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+.red {
+  color:red;
+  font-style: italic;
+  font-family: fantasy;
+}

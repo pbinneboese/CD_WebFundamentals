@@ -1,0 +1,63 @@
+/*CSS reset settings here*/
+*{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+/* DIVS DEFINED HERE */
+#wrapper{
+  /*height: 600px;*/
+  width: 500px;
+  font-family:arial,sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0px auto;
+  padding: 0px;
+}
+#header{
+  height: 110px;
+  width: 100%;
+  background-color: steelblue;
+  color: white;
+  border: 1px solid steelblue;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+  /*text-align: center;*/
+  vertical-align: top;
+}
+#header p{
+  vertical-align: top;
+  display: inline;
+}
+#header img{
+  height:100px;
+  display: inline;
+}
+#header button{
+  vertical-align: top;
+  display: inline-block;
+}
+
+#main{
+  /*height: 110px;*/
+  width: 100%;
+  /*border: 1px solid steelblue;*/
+  background-color: white;
+  color: black;
+  display:block;
+  margin: 0px;
+  padding: 0px;
+  /*text-align: center;*/
+  vertical-align: top;
+}
+
+.pokemon{
+  /*height: 100px;*/
+  /*width: 200px;*/
+  /*border: 1px solid steelblue;*/
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+  display: inline-block;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JQuery test exercise</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      "use strict";
+      /* My JQuery goes here */
+      function addTableRow(){
+        var firstName = $('input.formP1').val();
+        var lastName = $('input.formP2').val();
+        var emailAddr = $('input.formP3').val();
+        var contactNum = $('input.formP4').val();
+        var newUser =  "<tr><td>"+firstName+"</td><td>"+lastName+"</td><td>"+emailAddr+"</td><td>"+contactNum+"</td></tr>";
+        // console.log($('#myForm').serialize());
+        console.log(firstName+" "+lastName+" "+emailAddr+" "+contactNum);
+        $('#myTable').append(newUser);
+        $("#myForm").each(function(){
+          this.reset();
+        });
+        return false;
+      };
+
+      $(document).ready(function(){ /* initial page load */
+
+        $('#myForm').submit(function(){ /* form submit action */
+          addTableRow();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="top">
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email Address</th>
+              <th>Contact #</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="bottom">
+        <h1>Add User</h1>
+        <hr>
+        <form id="myForm">
+          First Name:<input class="formP1" type="text" name="firstName">
+          <p></p>
+          Last Name:<input class="formP2" type="text" name="lastName" value="">
+          <p></p>
+          Email Address:<input class="formP3" type="text" name="emailAddr" value="">
+          <p></p>
+          Contact #:<input class="formP4" type="text" name="contactNum" value="">
+          <p></p>
+          <input type="submit" value="Add User">
+        </form>
+      </div>
+
+    </div> <!-- end wrapper -->
+  </body>
+</html>

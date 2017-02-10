@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JQuery test exercise</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      /* My JQuery goes here */
+      $(document).ready(function(){
+        /* set initial conditions to illustrate JQuery actions */
+        $('#test5 h2').hide();
+        $('#test7 h2').slideUp();
+        $('#test8 h2').slideDown();
+        $('#test9 h2').fadeOut();
+
+        $('#footer').click(function(){  /* footer check */
+          console.log("hello");
+        });
+        $('#test1 button').click(function(){  /* addClass */
+          $('#test1 p').addClass("red");
+        });
+        $('#test2 button').click(function(){  /* slideToggle */
+          $('#test2 p').slideToggle();
+        });
+        $('#test3 button').click(function(){  /* append */
+          $('#test3 p').append("we added new text");
+        });
+        $('#test4 button').click(function(){  /* hide */
+          $('#test4 h2').hide();
+        });
+        $('#test5 button').click(function(){  /* show */
+          $('#test5 h2').show();
+        });
+        $('#test6 button').click(function(){  /* toggle */
+          $('#test6 h2').toggle();
+        });
+        $('#test7 button').click(function(){  /* slideDown */
+          $('#test7 h2').slideDown();
+        });
+        $('#test8 button').click(function(){  /* slideUp */
+          $('#test8 h2').slideUp();
+        });
+        $('#test9 button').click(function(){  /* fadeIn */
+          $('#test9 h2').fadeIn();
+        });
+        $('#test10 button').click(function(){  /* fadeOut */
+          $('#test10 h2').fadeOut();
+        });
+        $('#test11 button').click(function(){  /* before */
+          $('#test11 p').before("<em>YES</em>");
+        });
+        $('#test12 button').click(function(){  /* after */
+          $('#test12 p').after("<em>YES</em>");
+        });
+        $('#test13 button').click(function(){  /* html */
+          $('#test13 h2').html("<h6>This is small</h6>");
+        });
+        $('#test14 button').click(function(){  /* attr */
+          console.log($('#test14 button').attr("border"));
+        });
+        $('#test15 button').click(function(){  /* val */
+          console.log($('#searchBar').val());
+        });
+        $('#test16 button').click(function(){  /* text */
+          $('#test16 h2').text("Yes, it changed");
+        });
+        $('#test17 button').click(function(){  /* data */
+          var piVal = 42;
+          $('#test17').data("piVal", 3.14159);
+          console.log("Pi equals ",'#test17'.piVal);
+        });
+        $('#test18 button').click(function(){  /* css */
+          $('#test18 h2').css("font-family","cursive");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+<!--    <p>This is a Test Paragraph Element</p> -->
+    <div id="wrapper">
+      <div id="header">
+        <p>My jQuery basic assignment!</p>
+        <form id="searchForm">
+          <input id="urlBar" type="text" placeholder="http://localhost/jQuery.html">
+          <input id="searchBar" type="text" placeholder="Search">
+        </form>
+      </div>
+
+      <div id="main">
+        <div id="test1" class="testSection"> <!-- Test 1 -->
+          <h2>AddClass</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to add class 'red' to this paragraph</p>
+        </div>
+        <div id="test2" class="testSection"> <!-- Test 2 -->
+          <h2>SlideToggle</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to slidetoggle the text</p>
+        </div>
+        <div id="test3" class="testSection"> <!-- Test 3 -->
+          <h2>Append</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to append new text</p>
+        </div>
+        <div id="test4" class="testSection"> <!-- Test 4 -->
+          <h2>Hide</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to hide the heading</p>
+        </div>
+        <div id="test5" class="testSection"> <!-- Test 5 -->
+          <h2>Show</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to show the heading</p>
+        </div>
+        <div id="test6" class="testSection"> <!-- Test 6 -->
+          <h2>Toggle</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to toggle the heading</p>
+        </div>
+        <div id="test7" class="testSection"> <!-- Test 7 -->
+          <h2>SlideDown</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to slideDown the heading</p>
+        </div>
+        <div id="test8" class="testSection"> <!-- Test 8 -->
+          <h2>SlideUp</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to slideUp the heading</p>
+        </div>
+        <div id="test9" class="testSection"> <!-- Test 9 -->
+          <h2>FadeIn</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to fadeIn the heading</p>
+        </div>
+        <div id="test10" class="testSection"> <!-- Test 10 -->
+          <h2>FadeOut</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to fadeOut the heading</p>
+        </div>
+        <div id="test11" class="testSection"> <!-- Test 11 -->
+          <h2>Before</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to insert text before this</p>
+        </div>
+        <div id="test12" class="testSection"> <!-- Test 12 -->
+          <h2>After</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to insert text after this</p>
+        </div>
+        <div id="test13" class="testSection"> <!-- Test 13 -->
+          <h2>HTML</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to change heading type</p>
+        </div>
+        <div id="test14" class="testSection"> <!-- Test 14 -->
+          <h2>Attr</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to change button attributes</p>
+        </div>
+        <div id="test15" class="testSection"> <!-- Test 15 -->
+          <h2>Val</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to return the searchBar value</p>
+        </div>
+        <div id="test16" class="testSection"> <!-- Test 16 -->
+          <h2>Text</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to change the heading text</p>
+        </div>
+        <div id="test17" class="testSection"> <!-- Test 17 -->
+          <h2>Data</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to return a special message</p>
+        </div>
+        <div id="test18" class="testSection"> <!-- Test 18 -->
+          <h2>CSS</h2>
+          <button class="testButton">Click Me</button>
+          <p>Click the button to change the header style</p>
+        </div>
+      </div>
+
+      <div id="footer">
+      </div>
+    </div> <!-- end wrapper -->
+  </body>
+</html>

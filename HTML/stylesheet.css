@@ -1,0 +1,29 @@
+/*Write your CSS below.*/
+h1 {
+    color:brown;
+    font-family:serif;
+    font-size:2em;
+}
+h2 {
+    font-family:Courier;
+    font-size: 2em;
+    font-style:italic;
+}
+span {
+    background-color:yellow;
+}
+/* li {
+    color:brown;
+    font-size:0.5em;
+} */
+ul {
+    font-family:Arial;
+    font-size:1.2em;
+    color:blue;
+}
+ol {
+    font-family:serif;
+    font-size:1.5em;
+    color:red;
+}
+

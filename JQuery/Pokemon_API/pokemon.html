@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokemon exercise</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      "use strict";
+      /* My JQuery goes here */
+      // function incrementString(string) {}
+      var apiURL, pokemonID, pokemonName, pokemonImgTag, pokemonURL;
+      var data;
+
+      $(document).ready(function(){ /* initial page load */
+
+        $('button').click(function(){ /* fetch the pokemons upon click */
+          for (var i=1; i<=151; i++) {
+            apiURL = "http://pokeapi.co/api/v2/pokemon-form/"+i;
+            $.get(apiURL, function(data){
+              // console.log(data);
+              pokemonID = i;
+              pokemonName = data.name;
+              pokemonURL = data.sprites.front_default;
+              pokemonImgTag = '<img src="'+pokemonURL+'"> #'+pokemonID+' '+pokemonName;
+              $('div.pokemon').append(pokemonImgTag);
+            });
+          };
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <img src="http://pokeapi.co/media/img/1.png">
+        <p>Pokemons Throughout the Ages</p>
+        <button>Click to see all 151</button>
+      </div>
+      <div id="main">
+        <div class="pokemon">
+        </div>
+      </div>
+    </div> <!-- end wrapper -->
+  </body>
+</html>

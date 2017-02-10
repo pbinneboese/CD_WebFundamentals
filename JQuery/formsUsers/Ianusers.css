@@ -1,0 +1,36 @@
+/** {
+  outline: 1px dotted red;
+}*/
+
+#wrapper {
+  font-family: monospace;
+  margin: 0 auto;
+  width: 970px;
+}
+#wrapper table {
+  border: 2px solid black;
+  width: 700px;
+}
+#user-table th {
+  text-align: left;
+}
+#add-user-form label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: right;
+}
+#add-user-form h1 {
+  border-bottom: 2px solid black;
+}
+#submit-button {
+  background-color: lightgray;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: monospace;
+  width: 75px;
+  height: 25px;
+  font-size: 12px;
+}
+#add-user-form {
+  width: 245px;
+}

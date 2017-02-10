@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript test exercise</title>
+<!--  <link rel="stylesheet" type="text/css" href="style.css">-->
+    <script type="text/javascript">
+      "use strict";
+
+      /* Part 1 */
+      var students = [
+        {first_name:  'Michael', last_name : 'Jordan'},
+        {first_name : 'John', last_name : 'Rosales'},
+        {first_name : 'Mark', last_name : 'Guillen'},
+        {first_name : 'KB', last_name : 'Tonel'}
+      ];
+
+      function printNames() {
+      
+        for (var i = 0; i<students.length; i++) {
+          console.log(students[i].first_name, students[i].last_name);
+        }
+      }
+      console.log("Part 1");
+      printNames();
+
+      // /* Part 2 */
+      // var users = {
+      //   'Students': [
+      //     {first_name:  'Michael', last_name : 'Jordan'},
+      //     {first_name : 'John', last_name : 'Rosales'},
+      //     {first_name : 'Mark', last_name : 'Guillen'},
+      //     {first_name : 'KB', last_name : 'Tonel'}
+      //   ],
+      //   'Instructors': [
+      //     {first_name : 'Michael', last_name : 'Choi'},
+      //     {first_name : 'Martin', last_name : 'Puryear'}
+      //   ]
+      // };
+      //
+      // function printNamesAndMore() {
+      //   var key;
+      //   var i;
+      //   var name = {
+      //     first_name:"",
+      //     last_name:""
+      //   };
+      //
+      //   for (key in users) {
+      //     console.log(key); /* student or instructor */
+      //     for (i = 0; i < users[key].length; i++) {
+      //       name = users[key][i];
+      //       console.log((i+1) + " - " + name.first_name + " " + name.last_name + " - " + (name.first_name.length+name.last_name.length));
+      //     }
+      //   }
+      // }
+      // console.log("Part 2");
+      // printNamesAndMore();
+
+    </script>
+  </head>
+  <body>
+    <p>Open the Inspect->Console window to view output</p>
+  </body>
+</html>

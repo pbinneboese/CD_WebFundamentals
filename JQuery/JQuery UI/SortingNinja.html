@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Ninja puzzle pieces</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Include the JQuery and JQueryUI libraries -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+      "use strict";
+      /* My JQuery goes here */
+      $(document).ready(function(){ /* initial page load */
+        $("#sortable").sortable();
+        $("#sortable").disableSelection();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <ul id="sortable">
+        <li><img src="sorting_images/sort1.png" alt="piece1"></li>
+        <li><img src="sorting_images/sort2.png" alt="piece2"></li>
+        <li><img src="sorting_images/sort3.png" alt="piece3"></li>
+        <li><img src="sorting_images/sort4.png" alt="piece4"></li>
+        <li><img src="sorting_images/sort5.png" alt="piece5"></li>
+      </ul>
+    </div> <!-- end wrapper -->
+  </body>
+</html>

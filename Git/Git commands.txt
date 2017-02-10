@@ -1,0 +1,16 @@
+cd Desktop
+mkdir test
+touch index.html styles.css aboutMe.txt
+git init
+git add .
+git commit -m "new Git repo"
+git status
+git add aboutMe.txt
+git commit -m "updated aboutMe"
+git status
+git add aboutMe.txt
+git commit -m "added favorite movie to aboutMe"
+git log
+git revert -n HEAD
+git add aboutMe.txt
+git commit -m "added favorite movie after previous revert"

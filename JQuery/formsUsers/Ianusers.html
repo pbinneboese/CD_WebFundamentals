@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Ian's version -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users jQuery Assignment</title>
+    <link rel="stylesheet" type="text/css" href="Ianusers.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      "use strict";
+      $(document).ready(function() {
+        $("#form1").submit(function() {
+          var firstName = $("#form1").find('input[name="first_name"]').val();
+          var lastName = $("#form1").find('input[name="last_name"]').val();
+          var email = $("#form1").find('input[name="email"]').val();
+          var contact = $("#form1").find('input[name="contact-no"]').val();
+          var newUser = "<tr><td>" + firstName + "</td>" + "<td>" + lastName + "</td>" + "<td>" + email + "</td>" + "<td>" + contact + "</td></tr>";
+          $("#user-table").append(newUser);
+          $("#form1").each(function(){
+            this.reset();
+          });
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <table id="user-table">
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th>Contact #</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="add-user-form">
+        <h1>Add User</h1>
+        <form id="form1">
+          <label>
+              First Name:<input type="text" name="first_name" placeholder="First Name">
+          </label>
+          <label>
+              Last Name:<input type="text" name="last_name" placeholder="Last Name">
+          </label>
+          <label>
+              Email Address:<input type="text" name="email" placeholder="Email Address">
+          </label>
+          <label>
+               Contact #:<input type="text" name="contact-no" placeholder="Contact #">
+          </label>
+          <label>
+            <input id="submit-button" type="submit" value="Add User">
+          </label>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
